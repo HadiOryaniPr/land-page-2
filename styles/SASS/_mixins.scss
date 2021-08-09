@@ -1,0 +1,17 @@
+@mixin overal {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu";
+}
+
+@mixin textStyle($size, $weight, $color, $transform) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  text-transform: $transform;
+}
+
+@mixin hover($color) {
+  color: $color;
+}

@@ -1,0 +1,136 @@
+@import "variablse";
+@import "mixins";
+
+* {
+  @include overal;
+}
+
+body {
+  background: url(../image/bg.jpg) no-repeat center/cover;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // ------------------------------ Logo Name
+
+  p {
+    @include textStyle(1.7rem, 800, $secondryColor, capitalize);
+    margin: 0.5rem 0.9rem;
+
+    #span {
+      @include textStyle(1.8rem, 400, #ccc, capitalize);
+    }
+  }
+  //------------------------- The line below the logo
+  .line {
+    width: 500px;
+    height: 1px;
+    background: $primaryColor;
+  }
+
+  //------------------------------------ ul list
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(127, 128, 146, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    height: calc(100% - 2.8rem);
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 350px;
+    transition: all 0.2s ease-in;
+    transform: translate(-300px);
+    opacity: 0;
+
+    a {
+      @include textStyle(1.1rem, 500, $secondryColor, capitalize);
+      display: inline-block;
+      text-decoration: none;
+      margin: 25px;
+      transition: all 0.15s ease-in;
+
+      &:hover {
+        @include hover($hoverColor);
+      }
+    }
+  }
+
+  //---------------------------showmenu class
+  .showmenu {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+  //---------------------------------- hamburger menu
+  .fa-bars {
+    @include textStyle(1.6rem, none, $secondryColor, normal);
+    margin: 0.5rem 0.9rem;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      color: $primaryColor;
+      cursor: pointer;
+    }
+  }
+}
+
+//---------------------------- Central content
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 200px;
+
+  //--------------------------------------- title text
+  .headingText {
+    @include textStyle(2rem, 700, $primaryColor, capitalize);
+    background-color: rgba(255, 255, 255, 0.212);
+    padding: 1rem;
+    text-align: center;
+    width: 300px;
+    border-radius: 3px;
+  }
+  //------------------------------------- Description
+  .content {
+    margin: 1.2rem 0;
+
+    p {
+      @include textStyle(0.8rem, 500, #d6d6d6, capitalize);
+    }
+  }
+
+  //--------------------------------- Button
+  button {
+    width: 170px;
+    height: 40px;
+    margin-top: 0.7rem;
+    border: 1px solid $secondryColor;
+    background: transparent;
+    @include textStyle(0.9rem, 500, $secondryColor, capitalize);
+    transition: all 0.15s ease-in;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 8px 32px 0 rgba(126, 126, 133, 0.37);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu";
+}
+
+body {
+  background: url(../../image/bg.jpg) no-repeat center/cover;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header p {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #f5f5f5;
+  text-transform: capitalize;
+  margin: 0.5rem 0.9rem;
+}
+.header p #span {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #ccc;
+  text-transform: capitalize;
+}
+.header .line {
+  width: 500px;
+  height: 1px;
+  background: #e9c46a;
+}
+.header .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(127, 128, 146, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: calc(100% - 2.8rem);
+  position: absolute;
+  right: 0;
+  top: 45px;
+  width: 350px;
+  transition: all 0.2s ease-in;
+  transform: translate(-300px);
+  opacity: 0;
+}
+.header .menu a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  text-transform: capitalize;
+  display: inline-block;
+  text-decoration: none;
+  margin: 25px;
+  transition: all 0.15s ease-in;
+}
+.header .menu a:hover {
+  color: #fcbf49;
+}
+.header .showmenu {
+  opacity: 1;
+  transform: translate(0);
+}
+.header .fa-bars {
+  font-size: 1.6rem;
+  font-weight: none;
+  color: #f5f5f5;
+  text-transform: normal;
+  margin: 0.5rem 0.9rem;
+  transition: all 0.1s ease-in;
+}
+.header .fa-bars:hover {
+  color: #e9c46a;
+  cursor: pointer;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 200px;
+}
+.section .headingText {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e9c46a;
+  text-transform: capitalize;
+  background-color: rgba(255, 255, 255, 0.212);
+  padding: 1rem;
+  text-align: center;
+  width: 300px;
+  border-radius: 3px;
+}
+.section .content {
+  margin: 1.2rem 0;
+}
+.section .content p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #d6d6d6;
+  text-transform: capitalize;
+}
+.section button {
+  width: 170px;
+  height: 40px;
+  margin-top: 0.7rem;
+  border: 1px solid #f5f5f5;
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  text-transform: capitalize;
+  transition: all 0.15s ease-in;
+}
+.section button:hover {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(126, 126, 133, 0.37);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
