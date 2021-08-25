@@ -3,5 +3,3 @@
 # land-page-2
 a beautiful land page with flexbox and hamburger menu this land page is not responsive but i will fix it
   
- 
-
